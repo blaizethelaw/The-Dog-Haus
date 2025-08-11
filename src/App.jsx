@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PawPrint, Bone, Dog, Phone, Mail, MapPin, Menu, X, Sparkles } from 'lucide-react';
+import { Bone, Dog, Phone, Mail, MapPin, Menu, X, Sparkles } from 'lucide-react';
 
 // Helper component for icons
 const ServiceIcon = ({ icon, className }) => {
@@ -38,7 +38,7 @@ const Header = ({ onLinkClick }) => {
         <header className="bg-white/80 backdrop-blur-lg shadow-md fixed w-full top-0 z-50">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 <a href="#" onClick={(e) => onLinkClick(e, '#home')} className="flex items-center gap-2 text-2xl font-bold text-slate-800">
-                    <PawPrint className="text-amber-500" />
+                    <Dog className="text-amber-500" />
                     <span>The Dog Haus</span>
                 </a>
                 <nav className="hidden md:flex items-center space-x-6">
@@ -135,7 +135,7 @@ const Services = () => {
                             <ul className="space-y-2 text-slate-600">
                                 {service.details.map((detail, i) => (
                                     <li key={i} className="flex items-center gap-2">
-                                        <PawPrint size={16} className="text-amber-500" />
+                                        <Bone size={16} className="text-amber-500" />
                                         <span>{detail}</span>
                                     </li>
                                 ))}
@@ -163,7 +163,7 @@ const About = () => (
                         <ul className="space-y-2">
                             {['Certified Professional Pet Sitter (CPPS)', 'Professional Dog Trainer Certification', 'Pet First Aid & CPR Certified', 'Fully Licensed, Bonded & Insured', 'Member of Pet Sitters International'].map(cred => (
                                 <li key={cred} className="flex items-center gap-3">
-                                    <PawPrint size={18} className="text-amber-500" />
+                                    <Bone size={18} className="text-amber-500" />
                                     <span>{cred}</span>
                                 </li>
                             ))}
