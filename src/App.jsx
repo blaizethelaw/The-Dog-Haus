@@ -107,6 +107,41 @@ const Hero = ({ onLinkClick }) => (
     </section>
 );
 
+// About Section
+const About = () => (
+    <section id="about" className="py-20 bg-amber-50/50">
+        <div className="container mx-auto px-6">
+            <h2 className="text-4xl font-bold text-center text-slate-800 mb-12">About The Dog Haus</h2>
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div className="text-slate-700">
+                    <h3 className="text-3xl font-bold text-slate-800 mb-4">Hi, I'm Alana Hausker</h3>
+                    <p className="mb-4">As a certified professional pet sitter and dog trainer, I founded The Dog Haus to provide a premium alternative to app-based pet care services. My passion for animals and commitment to their well-being drives everything we do.</p>
+                    <p className="mb-6">Unlike casual dog walkers, I bring professional expertise and a genuine love for animals to every interaction. Your pet isn't just another appointment – they're a valued member of The Dog Haus family.</p>
+                    <div className="bg-white p-6 rounded-lg shadow-md">
+                        <h4 className="text-xl font-bold text-slate-800 mb-4">Professional Credentials</h4>
+                        <ul className="space-y-2">
+                            {['Certified Professional Pet Sitter (CPPS)', 'Professional Dog Trainer Certification', 'Pet First Aid & CPR Certified', 'Fully Licensed, Bonded & Insured', 'Member of Pet Sitters International'].map(cred => (
+                                <li key={cred} className="flex items-center gap-3">
+                                    <Bone size={18} className="text-amber-500" />
+                                    <span>{cred}</span>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
+                <div className="relative">
+                    <div className="aspect-w-4 aspect-h-5">
+                         <img src="https://i.imgur.com/L7sU70V.jpeg" alt="Alana Hausker with dogs" className="rounded-xl shadow-2xl object-cover w-full h-full" />
+                    </div>
+                    <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-rose-500 rounded-full flex items-center justify-center text-white text-6xl transform rotate-12">
+                        <Dog />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+);
+
 // Services Section
 const Services = () => {
     const services = [
@@ -147,41 +182,6 @@ const Services = () => {
         </section>
     );
 };
-
-// About Section
-const About = () => (
-    <section id="about" className="py-20 bg-amber-50/50">
-        <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center text-slate-800 mb-12">About The Dog Haus</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-                <div className="text-slate-700">
-                    <h3 className="text-3xl font-bold text-slate-800 mb-4">Hi, I'm Alana Hausker</h3>
-                    <p className="mb-4">As a certified professional pet sitter and dog trainer, I founded The Dog Haus to provide a premium alternative to app-based pet care services. My passion for animals and commitment to their well-being drives everything we do.</p>
-                    <p className="mb-6">Unlike casual dog walkers, I bring professional expertise and a genuine love for animals to every interaction. Your pet isn't just another appointment – they're a valued member of The Dog Haus family.</p>
-                    <div className="bg-white p-6 rounded-lg shadow-md">
-                        <h4 className="text-xl font-bold text-slate-800 mb-4">Professional Credentials</h4>
-                        <ul className="space-y-2">
-                            {['Certified Professional Pet Sitter (CPPS)', 'Professional Dog Trainer Certification', 'Pet First Aid & CPR Certified', 'Fully Licensed, Bonded & Insured', 'Member of Pet Sitters International'].map(cred => (
-                                <li key={cred} className="flex items-center gap-3">
-                                    <Bone size={18} className="text-amber-500" />
-                                    <span>{cred}</span>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-                <div className="relative">
-                    <div className="aspect-w-4 aspect-h-5">
-                         <img src="https://i.imgur.com/L7sU70V.jpeg" alt="Alana Hausker with dogs" className="rounded-xl shadow-2xl object-cover w-full h-full" />
-                    </div>
-                    <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-rose-500 rounded-full flex items-center justify-center text-white text-6xl transform rotate-12">
-                        <Dog />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-);
 
 // Gallery Section
 const Gallery = () => {
@@ -720,4 +720,5 @@ export default function App() {
             <Footer />
         </div>
     );
+
 }
