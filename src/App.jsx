@@ -708,8 +708,8 @@ export default function App() {
             <Header onLinkClick={handleLinkClick} />
             <main>
                 <Hero onLinkClick={handleLinkClick} />
-                <Services />
                 <About />
+                <Services />
                 <Gallery />
                 <Pricing />
                 <Testimonials />
@@ -722,3 +722,4 @@ export default function App() {
     );
 
 }
+
